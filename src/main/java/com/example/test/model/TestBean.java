@@ -1,5 +1,7 @@
 package com.example.test.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 
 @Entity
@@ -15,6 +17,7 @@ public class TestBean {
     private String cAes256;
 
     @Column(name="c_base64")
+    @JsonProperty("base64")
     private String cBase64;
 
     public Integer getId() {
